@@ -5,11 +5,16 @@ public class Bank {
         acct = new Account[10];
     }
     public void addAccount(Account ac) {
-        acct[numAcct] = ac;
+        for (int i = 0; i < 10; i++) {
+            if (acct[i] == null) {
+                acct[i] = ac;
+                break;
+            }
+        }
         numAcct++;
     }
     public Account getAccount(int index) {
-        return System.out.println(acct.acct[index]);
+        return acct[index];
     }
     public int getNumAccount() {
         return numAcct;
