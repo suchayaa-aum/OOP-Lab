@@ -14,8 +14,10 @@ public class Account {
         }
     }
     public void withdraw(double a) throws WithdrawException{
+//        throws label exception
         if (a > 0){
             throw new WithdrawException("Account "+getName()+" has not enough money.");
+//            throw to exception
         }else if (a < 0){
             System.out.println("Input number must be a positive integer.");
         }else if (getBalance() - a < 0){
